@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(flutter_desktop_sample LANGUAGES CXX)
+project(flutter_crypto LANGUAGES CXX)
 
-set(BINARY_NAME "flutter_desktop_sample")
+set(BINARY_NAME "flutter_crypto")
 
 cmake_policy(SET CMP0063 NEW)
 

@@ -1,11 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:convert/convert.dart';
 // import 'package:dart_des/dart_des.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop_sample/widget/PaginatedDataTableView.dart';
-import 'package:fluttercrypto/des/des.dart';
+import 'package:flutter_crypto/des/des.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,42 +12,14 @@ void main() {
 
 void initData() {
   String key = "000001504700056610017282";
-
-  // if (kDebugMode) {
-  //   print('Triple DES mode: ${key.codeUnits.toString()}');
-  // }
-  // DES3 desECB = DES3(
-  //     // key: utf8.encode(key),
-  //     key: key.codeUnits,
-  //     // key: key,
-  //     mode: DESMode.ECB,
-  //     iv: DES.IV_ZEROS,
-  //     paddingType: DESPaddingType.PKCS7);
-
   const data = "r,15888888888,1514773413174788099,second";
   // const data2 =
   //     "qOWRU4Gq/Qep2ARkkADJqYTLYwGyZg1tSvM3UR73EsQuT0pRRsLgkZhBFBi1Fq5R";
 
-  List<int> bytes = utf8.encode(data);
-  // bytes = [bytes[0], 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0];
-
-// List<int> encrypted = desECB.encrypt(data.codeUnits);
-  // List<int> encrypted = desECB.encrypt(data.codeUnits);
-  // List<int> encrypted = desECB.encrypt(bytes);
-  // List<int> res = desECB.decrypt(bytes);
-
-// Uint8List data=convert.
-
-  // var decryptBase64 = await FlutterDes.decryptFromBase64(data, key);
-
   List<int> desECB = DES().encrypWithEcb(data.codeUnits, key.codeUnits);
 
   if (kDebugMode) {
-    // print('Triple DES mode: ${encrypted.toString()}');
     print('加密: ${base64Encode(desECB)}');
-    // print('解密: ${utf8.decode(desECB)}');
-    // print('解密: ${utf8.encode(desECB)}');
-    // print('decrypted (utf8): ${utf8.decode(decrypted)}');
     print('---------------------------');
   }
 }
@@ -126,14 +96,13 @@ class _MyHomePageState extends State<MyHomePage> {
           // 这里的主轴是垂直轴，因为列是垂直的（横轴是水平的）。
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            PaginatedDataTableD(),
-            // const Text(
-            //   'You have pushed the button this many times:',
-            // ),
-            // Text(
-            //   '$_counter',
-            //   style: Theme.of(context).textTheme.headline4,
-            // ),
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
           ],
         ),
       ),

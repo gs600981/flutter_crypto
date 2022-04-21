@@ -1,6 +1,6 @@
 {
-    "name": "flutter_desktop_sample",
-    "short_name": "flutter_desktop_sample",
+    "name": "flutter_crypto",
+    "short_name": "flutter_crypto",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
