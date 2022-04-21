@@ -1,14 +1,16 @@
-# flutter_crypto
-Encryption algorithm library implemented by pure dart
+# flutter_desktop_sample
 
-纯dart 软算法实现 无调用Native代码
+A new Flutter project.
 
-当前支持DES   ECB CBC模式
+## Getting Started
 
-相比Flutter_des 
+This project is a starting point for a Flutter application.
 
-1000次调用耗时  flutter_des 2000+ms    本库   700+ms
+A few resources to get you started if this is your first Flutter project:
 
-100次调用耗时   flutter_des 1600+ms    本库   300ms
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-10次调用耗时    flutter_des 1400+ms    本库   50ms
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
